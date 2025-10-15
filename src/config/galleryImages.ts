@@ -27,17 +27,17 @@ export interface GalleryImage {
 export const galleryImages: GalleryImage[] = [
   // ЕКСТЕР'ЄР БУДИНКУ (фото 1-15)
   {
-    src: "https://images.unsplash.com/photo-1702222029197-a330aacb6efa?w=1080",
+    src: "/images/gallery/villa-summer-1.1=1080",
     alt: "Вілла Соколине гніздо влітку серед зелені",
     category: "exterior"
   },
   {
-    src: "https://images.unsplash.com/photo-1740258662768-b46a3f3f0c06?w=1080",
+    src: "/images/gallery/villa-autumn-2.1=1080",
     alt: "Вілла восени в золотих кольорах",
     category: "exterior"
   },
   {
-    src: "https://images.unsplash.com/photo-1568565609251-2d230a4fefc3?w=1080",
+    src: "/images/gallery-villa-winter-4.2=1080",
     alt: "Вілла взимку в снігу",
     category: "exterior"
   },
@@ -48,23 +48,48 @@ export const galleryImages: GalleryImage[] = [
 
   // ІНТЕР'ЄР (фото 16-35)
   {
-    src: "https://images.unsplash.com/photo-1668365011614-9c4a49a0e89d?w=1080",
+    src: "/images/gallery/villa-hall-6.1=1080",
     alt: "Вітальня вілли",
     category: "interior"
   },
   {
-    src: "https://images.unsplash.com/photo-1729606188713-814d1b7bf893?w=1080",
+    src: "/images/gallery/villa-bedroom-12.1=1080",
     alt: "Головна спальня",
     category: "interior"
   },
   {
-    src: "https://images.unsplash.com/photo-1639405069836-f82aa6dcb900?w=1080",
+    src: "/images/gallery/villa-kitchen-8.4=1080",
     alt: "Кухня",
     category: "interior"
   },
   {
-    src: "https://images.unsplash.com/photo-1658760046471-896cbc719c9d?w=1080",
+    src: "/images/gallery/villa-cabinet-9.2=1080",
+    alt: "Кабінет",
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/villa-bath-12.4=1080",
     alt: "Ванна кімната",
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/villa-garden-7.1=1080",
+    alt: "Зимовий сад",
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/villa-living-room-8.1=1080",
+    alt: "Вітальня",
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/villa-living-room-6.2=1080",
+    alt: "Вітальня сходи",
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/villa-childrenroom-15.2=1080",
+    alt: "Дитяча кімната",
     category: "interior"
   },
   // ДОДАЙТЕ БІЛЬШЕ ФОТО ІНТЕР'ЄРУ ТУТ
@@ -74,8 +99,13 @@ export const galleryImages: GalleryImage[] = [
 
   // ПРИРОДА І ТЕРИТОРІЯ (фото 36-50)
   {
-    src: "https://images.unsplash.com/photo-1652459002590-03af0263b70d?w=1080",
-    alt: "Національний заповідник Межигір'я",
+    src: "/images/gallery/villa-aero-5.1_1=1080",
+    alt: "Проект будинку",
+    category: "nature"
+  },
+  {
+    src: "/images/gallery/villa-progect-5.2_1=1080",
+    alt: "Проект будинку",
     category: "nature"
   },
   // ДОДАЙТЕ БІЛЬШЕ ФОТО ПРИРОДИ ТУТ

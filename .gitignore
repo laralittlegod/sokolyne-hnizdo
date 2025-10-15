@@ -1,0 +1,48 @@
+# === Node.js dependencies ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === Build output (автоматично створюється) ===
+build/
+dist/
+.next/
+out/
+.vercel/
+
+# === Environment variables (секретні ключі) ===
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# === OS / IDE files ===
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.log
+
+# === VSCode / Editors ===
+.vscode/
+.idea/
+*.iml
+
+# === Misc ===
+*.zip
+*.rar
+*.tmp
+*.bak
+
+# === Optional: якщо використовуєш Figma / графіку ===
+*.fig
+*.psd
+*.ai
+*.sketch
+
+# === Optional: backup or cache ===
+.cache/
+tmp/
