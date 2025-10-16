@@ -37,7 +37,7 @@ export const galleryImages: GalleryImage[] = [
     category: "exterior"
   },
   {
-    src: "/images/gallery-villa-winter-4.2.webp",
+    src: "/images/gallery/villa-winter-4.2.webp",
     alt: "Вілла взимку в снігу",
     category: "exterior"
   },
