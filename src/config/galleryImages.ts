@@ -83,11 +83,6 @@ export const galleryImages: GalleryImage[] = [
     category: "interior"
   },
   {
-    src: "/images/gallery/villa-living-room-6.2.webp",
-    alt: "Вітальня сходи",
-    category: "interior"
-  },
-  {
     src: "/images/gallery/villa-childrenroom-15.2.webp",
     alt: "Дитяча кімната",
     category: "interior"
