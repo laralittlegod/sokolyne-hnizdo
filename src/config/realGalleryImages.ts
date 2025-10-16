@@ -23,17 +23,17 @@ export interface RealGalleryImage {
 // src: villaLito (або "/images/gallery/villa-lito.png")
 export const realGalleryImages: RealGalleryImage[] = [
   {
-    src: "/images/gallery/villa-summer-1.1=1080",
+    src: "/images/gallery/villa-summer-1.1.webp",
     alt: "Вілла Соколине гніздо влітку серед зелені",
     category: "exterior"
   },
   {
-    src: "/images/gallery/villa-autumn-2.1=1080",
+    src: "/images/gallery/villa-autumn-2.1.webp",
     alt: "Вілла восени в золотих кольорах",
     category: "exterior"
   },
   {
-    src: "/images/gallery-villa-winter-4.2=1080",
+    src: "/images/gallery-villa-winter-4.2.webp",
     alt: "Вілла взимку в снігу",
     category: "exterior"
   },

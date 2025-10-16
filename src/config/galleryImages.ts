@@ -27,17 +27,17 @@ export interface GalleryImage {
 export const galleryImages: GalleryImage[] = [
   // ЕКСТЕР'ЄР БУДИНКУ (фото 1-15)
   {
-    src: "/images/gallery/villa-summer-1.1=1080",
+    src: "/images/gallery/villa-summer-1.1.webp",
     alt: "Вілла Соколине гніздо влітку серед зелені",
     category: "exterior"
   },
   {
-    src: "/images/gallery/villa-autumn-2.1=1080",
+    src: "/images/gallery/villa-autumn-2.1.webp",
     alt: "Вілла восени в золотих кольорах",
     category: "exterior"
   },
   {
-    src: "/images/gallery-villa-winter-4.2=1080",
+    src: "/images/gallery-villa-winter-4.2.webp",
     alt: "Вілла взимку в снігу",
     category: "exterior"
   },
@@ -48,47 +48,47 @@ export const galleryImages: GalleryImage[] = [
 
   // ІНТЕР'ЄР (фото 16-35)
   {
-    src: "/images/gallery/villa-hall-6.1=1080",
+    src: "/images/gallery/villa-hall-6.1.webp",
     alt: "Вітальня вілли",
     category: "interior"
   },
   {
-    src: "/images/gallery/villa-bedroom-12.1=1080",
+    src: "/images/gallery/villa-bedroom-12.1.webp",
     alt: "Головна спальня",
     category: "interior"
   },
   {
-    src: "/images/gallery/villa-kitchen-8.4=1080",
+    src: "/images/gallery/villa-kitchen-8.4.webp",
     alt: "Кухня",
     category: "interior"
   },
   {
-    src: "/images/gallery/villa-cabinet-9.2=1080",
+    src: "/images/gallery/villa-cabinet-9.2.webp",
     alt: "Кабінет",
     category: "interior"
   },
   {
-    src: "/images/gallery/villa-bath-12.4=1080",
+    src: "/images/gallery/villa-bath-12.4.webp",
     alt: "Ванна кімната",
     category: "interior"
   },
   {
-    src: "/images/gallery/villa-garden-7.1=1080",
+    src: "/images/gallery/villa-garden-7.1.webp",
     alt: "Зимовий сад",
     category: "interior"
   },
   {
-    src: "/images/gallery/villa-living-room-8.1=1080",
+    src: "/images/gallery/villa-living-room-8.1.webp",
     alt: "Вітальня",
     category: "interior"
   },
   {
-    src: "/images/gallery/villa-living-room-6.2=1080",
+    src: "/images/gallery/villa-living-room-6.2.webp",
     alt: "Вітальня сходи",
     category: "interior"
   },
   {
-    src: "/images/gallery/villa-childrenroom-15.2=1080",
+    src: "/images/gallery/villa-childrenroom-15.2.webp",
     alt: "Дитяча кімната",
     category: "interior"
   },
@@ -99,12 +99,12 @@ export const galleryImages: GalleryImage[] = [
 
   // ПРИРОДА І ТЕРИТОРІЯ (фото 36-50)
   {
-    src: "/images/gallery/villa-aero-5.1_1=1080",
+    src: "/images/gallery/villa-aero-5.1_1.webp",
     alt: "Проект будинку",
     category: "nature"
   },
   {
-    src: "/images/gallery/villa-progect-5.2_1=1080",
+    src: "/images/gallery/villa-progect-5.2_1.webp",
     alt: "Проект будинку",
     category: "nature"
   },
