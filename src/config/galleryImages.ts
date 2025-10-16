@@ -92,11 +92,6 @@ export const galleryImages: GalleryImage[] = [
     alt: "Дитяча кімната",
     category: "interior"
   },
-   {
-    src: "/images/gallery/villa-childrenroom-15.2.webp",
-    alt: "Дитяча кімната",
-    category: "interior"
-  },
   // ДОДАЙТЕ БІЛЬШЕ ФОТО ІНТЕР'ЄРУ ТУТ
   // { src: "/images/gallery/interior-05.jpg", alt: "Опис фото", category: "interior" },
   // { src: "/images/gallery/interior-06.jpg", alt: "Опис фото", category: "interior" },
