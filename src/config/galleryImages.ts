@@ -92,6 +92,11 @@ export const galleryImages: GalleryImage[] = [
     alt: "Дитяча кімната",
     category: "interior"
   },
+   {
+    src: "/images/gallery/villa-childrenroom-15.2.webp",
+    alt: "Дитяча кімната",
+    category: "interior"
+  },
   // ДОДАЙТЕ БІЛЬШЕ ФОТО ІНТЕР'ЄРУ ТУТ
   // { src: "/images/gallery/interior-05.jpg", alt: "Опис фото", category: "interior" },
   // { src: "/images/gallery/interior-06.jpg", alt: "Опис фото", category: "interior" },
@@ -106,6 +111,11 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/gallery/villa-progect-5.2_1.webp",
     alt: "Проект будинку",
+    category: "nature"
+  },
+  {
+    src: "/images/gallery/villa-spinng-1.2.webp",
+    alt: "Вілла навесні",
     category: "nature"
   },
   // ДОДАЙТЕ БІЛЬШЕ ФОТО ПРИРОДИ ТУТ
