@@ -48,7 +48,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
               Вілла
               <br />
               <span className="italic text-secondary">
-                Соколине гніздо
+                Чотири сезони
               </span>
             </motion.h1>
 
@@ -163,7 +163,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
         >
           <img
             src={heroImage}
-            alt="Вілла Соколине гніздо - аерофотознімок"
+            alt="Вілла Чотири сезони - аерофотознімок"
             className="h-full w-full object-cover"
             style={{ objectPosition: '65% center' }}
           />

@@ -3,19 +3,15 @@ import { motion, AnimatePresence } from "motion/react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { galleryImages, TOTAL_IMAGES, CURRENT_IMAGES } from "../config/galleryImages";
-import heroImage from "figma:asset/df33b0a7e0e2c89ed38bbe542ad4d2a2989202c8.png";
 
-// Додаємо головне фото з Figma на початок галереї
-const allGalleryImages = [
-  {
-    src: heroImage,
-    alt: "Вілла Соколине гніздо на заході сонця",
-    category: "exterior" as const,
-  },
-  ...galleryImages,
-];
+// Використовуємо тільки фото з galleryImages.ts
+const allGalleryImages = galleryImages;
 
-export function GallerySection() {
+interface GallerySectionProps {
+  onViewFullGallery?: () => void;
+}
+
+export function GallerySection({ onViewFullGallery }: GallerySectionProps) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const handlePrevious = () => {
@@ -82,19 +78,26 @@ export function GallerySection() {
           ))}
         </div>
 
-        {CURRENT_IMAGES < TOTAL_IMAGES && (
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-center mt-12 text-muted-foreground"
-          >
-            <p>
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          {onViewFullGallery ? (
+            <button
+              onClick={onViewFullGallery}
+              className="text-primary hover:text-secondary transition-colors underline underline-offset-4 text-lg"
+            >
+              Переглянути всі {TOTAL_IMAGES} фотографій в галереї →
+            </button>
+          ) : (
+            <p className="text-muted-foreground">
               Повна галерея з {TOTAL_IMAGES}+ фотографіями та 3 відео доступна після запиту на перегляд
             </p>
-          </motion.div>
-        )}
+          )}
+        </motion.div>
       </div>
 
       {/* Lightbox */}

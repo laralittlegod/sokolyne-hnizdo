@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { X, ChevronLeft, ChevronRight, ArrowLeft, Home } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, ArrowLeft, Home, ArrowUp } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Button } from "../components/ui/button";
 import heroImage from "figma:asset/df33b0a7e0e2c89ed38bbe542ad4d2a2989202c8.png";
@@ -10,14 +10,14 @@ const generateGalleryImages = () => {
   const images = [
     {
       src: heroImage,
-      alt: "Вілла Соколине гніздо на заході сонця",
-      category: "exterior" as const,
+      alt: "Вілла 4 сезони на заході сонця",
+      category: "autumn" as const,
     },
   ];
 
   // Додаємо placeholder фото (замініть на реальні)
   const placeholders = [
-    "https://images.unsplash.com/photo-1702222029197-a330aacb6efa?w=1080",
+    src: "/images/gallery/villa-summer-01.jpg",
     "https://images.unsplash.com/photo-1740258662768-b46a3f3f0c06?w=1080",
     "https://images.unsplash.com/photo-1568565609251-2d230a4fefc3?w=1080",
     "https://images.unsplash.com/photo-1668365011614-9c4a49a0e89d?w=1080",
@@ -27,14 +27,14 @@ const generateGalleryImages = () => {
     "https://images.unsplash.com/photo-1652459002590-03af0263b70d?w=1080",
   ];
 
-  const categories: Array<"exterior" | "interior" | "nature" | "details"> = [
-    "exterior", "exterior", "exterior", "interior", "interior", "interior", "nature", "details"
+  const categories: Array<"autumn" | "winter" | "spring" | "summer" | "interior"> = [
+    "autumn", "winter", "spring", "summer", "interior", "autumn", "winter", "spring"
   ];
 
   for (let i = 0; i < 49; i++) {
     images.push({
       src: placeholders[i % placeholders.length],
-      alt: `Вілла Соколине гніздо - фото ${i + 2}`,
+      alt: `Вілла 4 сезони - фото ${i + 2}`,
       category: categories[i % categories.length],
     });
   }
@@ -51,6 +51,7 @@ interface GalleryPageProps {
 export function GalleryPage({ onBackToHome }: GalleryPageProps) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [filter, setFilter] = useState<string>("all");
+  const filtersRef = useRef<HTMLDivElement>(null);
 
   const filteredImages = filter === "all" 
     ? allGalleryImages 
@@ -78,6 +79,19 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
     if (e.key === "Escape") setSelectedImage(null);
   };
 
+  const scrollToFilters = () => {
+    filtersRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const filterCategories = [
+    { value: "all", label: "Всі фото" },
+    { value: "autumn", label: "Осінь" },
+    { value: "winter", label: "Зима" },
+    { value: "spring", label: "Весна" },
+    { value: "summer", label: "Літо" },
+    { value: "interior", label: "Інтер'єр" },
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -85,7 +99,7 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div>
             <h1 className="text-3xl md:text-4xl mb-2">Повна галерея</h1>
-            <p className="opacity-90">Вілла "Соколине гніздо"</p>
+            <p className="opacity-90">Вілла "4 сезони"</p>
           </div>
           <Button
             variant="outline"
@@ -111,18 +125,13 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
         <div className="max-w-7xl mx-auto">
           {/* Filters */}
           <motion.div
+            ref={filtersRef}
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             className="mb-12 flex flex-wrap gap-3 justify-center"
           >
-            {[
-              { value: "all", label: "Всі фото" },
-              { value: "exterior", label: "Екстер'єр" },
-              { value: "interior", label: "Інтер'єр" },
-              { value: "nature", label: "Природа" },
-              { value: "details", label: "Деталі" },
-            ].map((item) => (
+            {filterCategories.map((item) => (
               <button
                 key={item.value}
                 onClick={() => setFilter(item.value)}
@@ -145,12 +154,18 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
             className="text-center mb-12"
           >
             <p className="text-lg text-muted-foreground">
-              Показано {filteredImages.length} {filter === "all" ? "фотографій" : `фото категорії "${filter === "exterior" ? "Екстер'єр" : filter === "interior" ? "Інтер'єр" : filter === "nature" ? "Природа" : "Деталі"}"`}
+              Показано {filteredImages.length} {filter === "all" ? "фотографій" : `фото категорії "${
+                filter === "autumn" ? "Осінь" : 
+                filter === "winter" ? "Зима" : 
+                filter === "spring" ? "Весна" : 
+                filter === "summer" ? "Літо" : 
+                "Інтер'єр"
+              }"`}
             </p>
           </motion.div>
 
           {/* Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 relative">
             {filteredImages.map((image, index) => (
               <motion.div
                 key={index}
@@ -158,7 +173,7 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.02 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="cursor-pointer overflow-hidden rounded-lg aspect-[4/3] bg-muted shadow-md hover:shadow-xl transition-all"
+                className="cursor-pointer overflow-hidden rounded-lg aspect-[4/3] bg-muted shadow-md hover:shadow-xl transition-all relative"
                 onClick={() => setSelectedImage(index)}
               >
                 <ImageWithFallback
@@ -173,6 +188,51 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
             ))}
           </div>
 
+          {/* Scroll to Top Button - показується після прокрутки */}
+          {filteredImages.length > 12 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+              className="fixed bottom-8 right-8 z-30"
+            >
+              <Button
+                onClick={scrollToFilters}
+                size="lg"
+                className="rounded-full w-14 h-14 shadow-2xl bg-primary hover:bg-primary/90"
+                aria-label="Повернутися до фільтрів"
+              >
+                <ArrowUp className="h-6 w-6" />
+              </Button>
+            </motion.div>
+          )}
+
+          {/* Duplicate Filters at Bottom для зручності */}
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mt-16 mb-8 flex flex-wrap gap-3 justify-center"
+          >
+            {filterCategories.map((item) => (
+              <button
+                key={`bottom-${item.value}`}
+                onClick={() => {
+                  setFilter(item.value);
+                  scrollToFilters();
+                }}
+                className={`px-6 py-3 rounded-full transition-all ${
+                  filter === item.value
+                    ? "bg-primary text-primary-foreground shadow-lg"
+                    : "bg-card text-foreground border border-border hover:border-secondary hover:shadow"
+                }`}
+              >
+                {item.label}
+              </button>
+            ))}
+          </motion.div>
+
           {/* Footer Info */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -186,12 +246,12 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
               будь ласка, зв'яжіться з нами
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:info@sokolyne-hnizdo.com">
+              <a href="mailto:viktorkonar@gmail.com">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
                   Написати на email
                 </Button>
               </a>
-              <a href="tel:+380000000000">
+              <a href="tel:+380937560491">
                 <Button size="lg" variant="outline">
                   Зателефонувати
                 </Button>
