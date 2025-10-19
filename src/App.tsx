@@ -62,7 +62,7 @@ export default function App() {
       <HeroSection onContactClick={scrollToContact} />
       <FeaturesSection />
       <DetailSection />
-      <GallerySection />
+      <GallerySection onViewFullGallery={() => setCurrentPage("gallery")} />
       <VideoSection />
       <InvestmentSection onContactClick={scrollToContact} />
       <ContactSection ref={contactRef} />
