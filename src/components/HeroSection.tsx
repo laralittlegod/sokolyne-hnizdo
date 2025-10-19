@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { ChevronDown, MapPin, Home } from "lucide-react";
 import { Button } from "./ui/button";
-import heroImage from "figma:asset/df33b0a7e0e2c89ed38bbe542ad4d2a2989202c8.png";
+import heroImage from "/images/hero-2.webp";
 
 interface HeroSectionProps {
   onContactClick: () => void;

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Toaster } from "./components/ui/sonner";
 import { GoogleAnalytics, trackEvent } from "./components/GoogleAnalytics";
 import { HeroSection } from "./components/HeroSection";
