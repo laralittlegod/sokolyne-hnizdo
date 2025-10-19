@@ -26,10 +26,10 @@ export interface GalleryImage {
 
 export const galleryImages: GalleryImage[] = [
   // ЕКСТЕР'ЄР БУДИНКУ → "ЛІТО"
-
+  {
     src: "/images/gallery/villa-summer-1.1.webp",
     alt: "Вілла Чотири сезони влітку серед зелені",
-    category: "summer"
+    category: "summer",
   },
   {
     src: "/images/gallery/villa-autumn-2.1.webp",

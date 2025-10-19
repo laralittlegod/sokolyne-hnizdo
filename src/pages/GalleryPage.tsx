@@ -3,46 +3,10 @@ import { motion, AnimatePresence } from "motion/react";
 import { X, ChevronLeft, ChevronRight, ArrowLeft, Home, ArrowUp } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Button } from "../components/ui/button";
-import heroImage from "figma:asset/df33b0a7e0e2c89ed38bbe542ad4d2a2989202c8.png";
+import { realGalleryImages } from "../config/realGalleryImages";
 
-// Генеруємо масив з 50 фотографій
-const generateGalleryImages = () => {
-  const images = [
-    {
-      src: heroImage,
-      alt: "Вілла 4 сезони на заході сонця",
-      category: "autumn" as const,
-    },
-  ];
-
-  // Додаємо placeholder фото (замініть на реальні)
-  const placeholders = [
-    src: "/images/gallery/villa-summer-01.jpg",
-    "https://images.unsplash.com/photo-1740258662768-b46a3f3f0c06?w=1080",
-    "https://images.unsplash.com/photo-1568565609251-2d230a4fefc3?w=1080",
-    "https://images.unsplash.com/photo-1668365011614-9c4a49a0e89d?w=1080",
-    "https://images.unsplash.com/photo-1729606188713-814d1b7bf893?w=1080",
-    "https://images.unsplash.com/photo-1639405069836-f82aa6dcb900?w=1080",
-    "https://images.unsplash.com/photo-1658760046471-896cbc719c9d?w=1080",
-    "https://images.unsplash.com/photo-1652459002590-03af0263b70d?w=1080",
-  ];
-
-  const categories: Array<"autumn" | "winter" | "spring" | "summer" | "interior"> = [
-    "autumn", "winter", "spring", "summer", "interior", "autumn", "winter", "spring"
-  ];
-
-  for (let i = 0; i < 49; i++) {
-    images.push({
-      src: placeholders[i % placeholders.length],
-      alt: `Вілла 4 сезони - фото ${i + 2}`,
-      category: categories[i % categories.length],
-    });
-  }
-
-  return images;
-};
-
-const allGalleryImages = generateGalleryImages();
+// Використовуємо реальні фото з конфігу
+const allGalleryImages = realGalleryImages;
 
 interface GalleryPageProps {
   onBackToHome?: () => void;
@@ -246,12 +210,12 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
               будь ласка, зв'яжіться з нами
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:viktorkonar@gmail.com">
+              <a href="mailto:info@villa4sezony.com">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
                   Написати на email
                 </Button>
               </a>
-              <a href="tel:+380937560491">
+              <a href="tel:+380XXXXXXXXX">
                 <Button size="lg" variant="outline">
                   Зателефонувати
                 </Button>
