@@ -9,6 +9,7 @@ import { VideoSection } from "./components/VideoSection";
 import { InvestmentSection } from "./components/InvestmentSection";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
+import { GalleryPage } from "./pages/GalleryPage";
 
 export default function App() {
   const contactRef = useRef<HTMLElement>(null);
