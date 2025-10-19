@@ -1,5 +1,5 @@
 /**
- * Конфігурація галереї зображень вілли "Соколине гніздо"
+ * Конфігурація галереї зображень вілли "Чотири сезони"
  * 
  * ІНСТРУКЦІЯ ДЛЯ ДОДАВАННЯ ВЛАСНИХ ФОТОГРАФІЙ:
  * 
@@ -21,25 +21,25 @@
 export interface GalleryImage {
   src: string;
   alt: string;
-  category?: 'exterior' | 'interior' | 'nature' | 'details';
+  category?: 'eautumn' | 'winter' | 'spring' | 'summer' | 'interior';
 }
 
 export const galleryImages: GalleryImage[] = [
-  // ЕКСТЕР'ЄР БУДИНКУ (фото 1-15)
-  {
+  // ЕКСТЕР'ЄР БУДИНКУ → "ЛІТО"
+
     src: "/images/gallery/villa-summer-1.1.webp",
-    alt: "Вілла Соколине гніздо влітку серед зелені",
-    category: "exterior"
+    alt: "Вілла Чотири сезони влітку серед зелені",
+    category: "summer"
   },
   {
     src: "/images/gallery/villa-autumn-2.1.webp",
     alt: "Вілла восени в золотих кольорах",
-    category: "exterior"
+    category: "autumn"
   },
   {
     src: "/images/gallery/villa-winter-4.2.webp",
     alt: "Вілла взимку в снігу",
-    category: "exterior"
+    category: "winter"
   },
   // ДОДАЙТЕ БІЛЬШЕ ФОТО ЕКСТЕР'ЄРУ ТУТ
   // { src: "/images/gallery/exterior-04.jpg", alt: "Опис фото", category: "exterior" },
@@ -106,7 +106,7 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/gallery/villa-spinng-1.2.webp",
     alt: "Вілла навесні",
-    category: "nature"
+    category: "spring"
   },
   // ДОДАЙТЕ БІЛЬШЕ ФОТО ПРИРОДИ ТУТ
   // { src: "/images/gallery/nature-02.jpg", alt: "Опис фото", category: "nature" },
