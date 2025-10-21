@@ -47,14 +47,18 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
     filtersRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const filterCategories = [
-    { value: "all", label: "Всі фото" },
-    { value: "autumn", label: "Осінь" },
-    { value: "winter", label: "Зима" },
-    { value: "spring", label: "Весна" },
-    { value: "summer", label: "Літо" },
-    { value: "interior", label: "Інтер'єр" },
-  ];
+  const filterCategories = {
+    firstRow: [
+      { value: "all", label: "Всі фото" },
+      { value: "interior", label: "Інтер'єр" },
+    ],
+    secondRow: [
+      { value: "autumn", label: "Осінь" },
+      { value: "winter", label: "Зима" },
+      { value: "spring", label: "Весна" },
+      { value: "summer", label: "Літо" },
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -67,21 +71,18 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
           </div>
           <Button
             variant="outline"
-            size="sm"
             onClick={onBackToHome || (() => window.location.href = '/')}
-            className="border-primary-foreground/20 bg-primary-foreground text-primary hover:bg-primary-foreground/95 hover:text-secondary hover:border-secondary/50 shrink-0 md:text-base"
+            className="border-primary-foreground/20 bg-primary-foreground text-primary hover:bg-primary-foreground/95 hover:text-secondary hover:border-secondary/50 shrink-0"
           >
             {onBackToHome ? (
               <>
-                <ArrowLeft className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" />
-                <span className="hidden xs:inline">Назад</span>
-                <span className="xs:hidden">←</span>
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Назад
               </>
             ) : (
               <>
-                <Home className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" />
-                <span className="hidden xs:inline">На головну</span>
-                <span className="xs:hidden">🏠</span>
+                <Home className="h-4 w-4 mr-2" />
+                На головну
               </>
             )}
           </Button>
@@ -96,21 +97,41 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="mb-8 md:mb-12 flex flex-wrap gap-2 md:gap-3 justify-center"
+            className="mb-8 md:mb-12 space-y-3"
           >
-            {filterCategories.map((item) => (
-              <button
-                key={item.value}
-                onClick={() => setFilter(item.value)}
-                className={`px-3 py-2 sm:px-4 sm:py-2.5 md:px-6 md:py-3 text-sm md:text-base rounded-full transition-all ${
-                  filter === item.value
-                    ? "bg-primary text-primary-foreground shadow-lg"
-                    : "bg-card text-foreground border border-border hover:border-secondary hover:shadow"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
+            {/* Перший рядок: Всі фото + Інтер'єр */}
+            <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
+              {filterCategories.firstRow.map((item) => (
+                <button
+                  key={item.value}
+                  onClick={() => setFilter(item.value)}
+                  className={`px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm md:text-base rounded-full transition-all ${
+                    filter === item.value
+                      ? "bg-primary text-primary-foreground shadow-lg"
+                      : "bg-card text-foreground border border-border hover:border-secondary hover:shadow"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+            
+            {/* Другий рядок: Сезони */}
+            <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
+              {filterCategories.secondRow.map((item) => (
+                <button
+                  key={item.value}
+                  onClick={() => setFilter(item.value)}
+                  className={`px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm md:text-base rounded-full transition-all ${
+                    filter === item.value
+                      ? "bg-primary text-primary-foreground shadow-lg"
+                      : "bg-card text-foreground border border-border hover:border-secondary hover:shadow"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
           </motion.div>
 
           {/* Gallery Info */}
@@ -180,24 +201,47 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mt-12 md:mt-16 mb-6 md:mb-8 flex flex-wrap gap-2 md:gap-3 justify-center"
+            className="mt-12 md:mt-16 mb-6 md:mb-8 space-y-3"
           >
-            {filterCategories.map((item) => (
-              <button
-                key={`bottom-${item.value}`}
-                onClick={() => {
-                  setFilter(item.value);
-                  scrollToFilters();
-                }}
-                className={`px-3 py-2 sm:px-4 sm:py-2.5 md:px-6 md:py-3 text-sm md:text-base rounded-full transition-all ${
-                  filter === item.value
-                    ? "bg-primary text-primary-foreground shadow-lg"
-                    : "bg-card text-foreground border border-border hover:border-secondary hover:shadow"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
+            {/* Перший рядок: Всі фото + Інтер'єр */}
+            <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
+              {filterCategories.firstRow.map((item) => (
+                <button
+                  key={`bottom-${item.value}`}
+                  onClick={() => {
+                    setFilter(item.value);
+                    scrollToFilters();
+                  }}
+                  className={`px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm md:text-base rounded-full transition-all ${
+                    filter === item.value
+                      ? "bg-primary text-primary-foreground shadow-lg"
+                      : "bg-card text-foreground border border-border hover:border-secondary hover:shadow"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+            
+            {/* Другий рядок: Сезони */}
+            <div className="flex flex-wrap gap-2 md:gap-3 justify-center">
+              {filterCategories.secondRow.map((item) => (
+                <button
+                  key={`bottom-${item.value}`}
+                  onClick={() => {
+                    setFilter(item.value);
+                    scrollToFilters();
+                  }}
+                  className={`px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm md:text-base rounded-full transition-all ${
+                    filter === item.value
+                      ? "bg-primary text-primary-foreground shadow-lg"
+                      : "bg-card text-foreground border border-border hover:border-secondary hover:shadow"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
           </motion.div>
 
           {/* Footer Info */}
@@ -213,7 +257,7 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
               будь ласка, зв'яжіться з нами
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
-              <a href="mailto:viktorconar@gmail.com" className="w-full sm:w-auto">
+              <a href="mailto:viktorkonar@gmail.com" className="w-full sm:w-auto">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 w-full sm:w-auto">
                   Написати на email
                 </Button>
