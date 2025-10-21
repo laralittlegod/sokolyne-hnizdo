@@ -63,7 +63,7 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div>
             <h1 className="text-3xl md:text-4xl mb-2">Повна галерея</h1>
-            <p className="opacity-90">Вілла "4 сезони"</p>
+            <p className="opacity-90">Вілла "Чотири сезони"</p>
           </div>
           <Button
             variant="outline"
