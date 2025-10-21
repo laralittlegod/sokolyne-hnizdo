@@ -85,7 +85,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
               </div>
               <div>
                 <div className="text-sm opacity-70 mb-1">Вартість</div>
-                <div className="text-2xl text-secondary">€2,000,000</div>
+                <div className="text-2xl text-secondary">€2,200,000</div>
               </div>
             </motion.div>
 
