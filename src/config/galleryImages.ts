@@ -21,7 +21,7 @@
 export interface GalleryImage {
   src: string;
   alt: string;
-  category?: 'eautumn' | 'winter' | 'spring' | 'summer' | 'interior';
+  category?: 'autumn' | 'winter' | 'spring' | 'summer' | 'interior';
 }
 
 export const galleryImages: GalleryImage[] = [
@@ -96,12 +96,12 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/gallery/villa-aero-5.1_1.webp",
     alt: "Проект будинку",
-    category: "nature"
+    category: "summer"
   },
   {
     src: "/images/gallery/villa-progect-5.2_1.webp",
     alt: "Проект будинку",
-    category: "nature"
+    category: "summer"
   },
   {
     src: "/images/gallery/villa-spinng-1.2.webp",
