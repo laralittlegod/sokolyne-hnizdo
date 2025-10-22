@@ -286,7 +286,10 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
           >
             {/* Close Button */}
             <button
-              onClick={() => setSelectedImage(null)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(null);
+              }}
               className="fixed top-2 right-2 sm:top-4 sm:right-4 text-white hover:text-white/70 transition-colors z-[10001] bg-black/60 hover:bg-black/80 rounded-full p-2 sm:p-3"
               aria-label="Закрити"
             >
@@ -311,7 +314,7 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
                 e.stopPropagation();
                 handleNext();
               }}
-               className="fixed right-2 sm:right-4 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 text-white hover:text-white/70 transition-colors z-[10001] bg-black/60 hover:bg-black/80 rounded-full p-2 sm:p-3"
+              className="fixed right-2 sm:right-4 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 text-white hover:text-white/70 transition-colors z-[10001] bg-black/60 hover:bg-black/80 rounded-full p-2 sm:p-3"
               aria-label="Наступне фото"
             >
               <ChevronRight className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
@@ -328,7 +331,7 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
               <img
                 src={filteredImages[selectedImage].src}
                 alt={filteredImages[selectedImage].alt}
-                className="max-w-full max-h-[70vh] sm:max-h-[75vh] md:max-h-[80vh] lg:max-h-[85vh] object-contain"
+                className="max-w-full max-h-[60vh] sm:max-h-[65vh] md:max-h-[70vh] lg:max-h-[75vh] object-contain"
               />
               <div className="text-white text-center mt-3 md:mt-4 space-y-1 md:space-y-2 px-4">
                 <p className="text-sm md:text-base lg:text-lg line-clamp-2">{filteredImages[selectedImage].alt}</p>
