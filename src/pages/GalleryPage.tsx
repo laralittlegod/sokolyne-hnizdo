@@ -279,7 +279,7 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-2 sm:p-4"
+            className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-2 sm:p-4"
             onClick={() => setSelectedImage(null)}
             onKeyDown={handleKeyDown}
             tabIndex={0}
@@ -287,10 +287,10 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
             {/* Close Button */}
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white hover:text-white/70 transition-colors z-10 bg-black/30 rounded-full p-1.5 sm:p-2"
+              className="fixed top-2 right-2 sm:top-4 sm:right-4 text-white hover:text-white/70 transition-colors z-[10001] bg-black/60 hover:bg-black/80 rounded-full p-2 sm:p-3"
               aria-label="Закрити"
             >
-              <X className="h-6 w-6 sm:h-8 sm:w-8" />
+              <X className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8" />
             </button>
 
             {/* Previous Button */}
@@ -299,7 +299,7 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
                 e.stopPropagation();
                 handlePrevious();
               }}
-              className="absolute left-2 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 text-white hover:text-white/70 transition-colors z-10 bg-black/30 rounded-full p-1.5 sm:p-2"
+              className="fixed left-2 sm:left-4 md:left-6 lg:left-8 top-1/2 -translate-y-1/2 text-white hover:text-white/70 transition-colors z-[10001] bg-black/60 hover:bg-black/80 rounded-full p-2 sm:p-3"
               aria-label="Попереднє фото"
             >
               <ChevronLeft className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
@@ -311,7 +311,7 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
                 e.stopPropagation();
                 handleNext();
               }}
-              className="absolute right-2 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 text-white hover:text-white/70 transition-colors z-10 bg-black/30 rounded-full p-1.5 sm:p-2"
+               className="fixed right-2 sm:right-4 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 text-white hover:text-white/70 transition-colors z-[10001] bg-black/60 hover:bg-black/80 rounded-full p-2 sm:p-3"
               aria-label="Наступне фото"
             >
               <ChevronRight className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
@@ -322,7 +322,7 @@ export function GalleryPage({ onBackToHome }: GalleryPageProps) {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              className="max-w-7xl w-full h-full flex flex-col items-center justify-center"
+              className="relative max-w-7xl w-full flex flex-col items-center justify-center px-16 sm:px-20 md:px-24 lg:px-32"
               onClick={(e) => e.stopPropagation()}
             >
               <img

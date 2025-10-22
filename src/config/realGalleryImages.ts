@@ -113,7 +113,7 @@ export const realGalleryImages: RealGalleryImage[] = [
 
   // ========== ЗИМА (10 фото) ==========
   {
-    src: "/images/gallery/winter-01.webpg",
+    src: "/images/gallery/winter-01.webp",
     alt: "Вілла вкрита снігом",
     category: "winter"
   },
