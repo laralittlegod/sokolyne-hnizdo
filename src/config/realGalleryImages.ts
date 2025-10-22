@@ -52,7 +52,7 @@ export const realGalleryImages: RealGalleryImage[] = [
     alt: "Зона барбекю",
     category: "summer"
   },
-  
+ 
   {
     src: "/images/gallery/summer-15.webp",
     alt: "Захід сонця над віллою",
@@ -61,47 +61,47 @@ export const realGalleryImages: RealGalleryImage[] = [
 
   // ========== ОСІНЬ (10 фото) ==========
   {
-    src: "/images/gallery/autumn-01.webp",
+    src: "/images/gallery/7.3_autumn.webp",
     alt: "Вілла в золотих барвах осені",
     category: "autumn"
   },
   {
-    src: "/images/gallery/autumn-02.webp",
+    src: "/images/gallery/autumn_2.1.webp",
     alt: "Осіннє листя навколо вілли",
     category: "autumn"
   },
   {
-    src: "/images/gallery/autumn-03.webp",
+    src: "/images/gallery/autumn_3.webp",
     alt: "Фасад восени",
     category: "autumn"
   },
   {
-    src: "/images/gallery/autumn-04.webp",
+    src: "/images/gallery/autumn_house.webp",
     alt: "Тераса в осінній період",
     category: "autumn"
   },
   {
-    src: "/images/gallery/autumn-05.webp",
+    src: "/images/gallery/autumn_house_2.webp",
     alt: "Сад в осінніх фарбах",
     category: "autumn"
   },
   {
-    src: "/images/gallery/autumn-06.webp",
+    src: "/images/gallery/autumn_house_3.webp",
     alt: "Алея з опалим листям",
     category: "autumn"
   },
   {
-    src: "/images/gallery/autumn-07.webp",
+    src: "/images/gallery/autumn_house_6.1.webp",
     alt: "Вечірні вогні восени",
     category: "autumn"
   },
   {
-    src: "/images/gallery/autumn-08.webp",
+    src: "/images/gallery/autumn_house_7.webp",
     alt: "Вид з вікна восени",
     category: "autumn"
   },
   {
-    src: "/images/gallery/autumn-09.webp",
+    src: "/images/gallery/autumn_house_8.webp",
     alt: "Осінній ранок",
     category: "autumn"
   },
