@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Play } from "lucide-react";
+import { Play, X } from "lucide-react";
 import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
@@ -7,25 +7,25 @@ export function VideoSection() {
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
 
   const videos = [
-  {
-    thumbnail: "/images/video-thumbnails/territory.jpg",
-    title: "Огляд території вілли",
-    duration: "3:45",
-    videoUrl: "https://youtube.com/shorts/6cSzkZAiFVQ?si=rqRF1uqbXz8ALC-n",
-  },
-  {
-    thumbnail: "/images/video-thumbnails/interior.jpg",
-    title: "Інтер'єр маєтку",
-    duration: "5:12",
-    videoUrl: "https://youtube.com/shorts/7t1Lldq2vUY",
-  },
-  {
-    thumbnail: "/images/video-thumbnails/nature.jpg",
-    title: "Заповідник Межигір'я",
-    duration: "2:30",
-    videoUrl: "https://youtube.com/shorts/ckaUKhu5bjc?si=CKYJCwTnZ7kZoapH",
-  },
-];
+    {
+      thumbnail: "/images/video-thumbnails/territory.jpg",
+      title: "Огляд території вілли",
+      duration: "3:45",
+      videoUrl: "https://www.youtube.com/embed/6cSzkZAiFVQ",
+    },
+    {
+      thumbnail: "/images/video-thumbnails/interior.jpg",
+      title: "Інтер'єр маєтку",
+      duration: "5:12",
+      videoUrl: "https://www.youtube.com/embed/7t1Lldq2vUY",
+    },
+    {
+      thumbnail: "/images/video-thumbnails/nature.jpg",
+      title: "Заповідник Межигір'я",
+      duration: "2:30",
+      videoUrl: "https://www.youtube.com/embed/ckaUKhu5bjc",
+    },
+  ];
 
   return (
     <section className="py-24 px-4 bg-muted/10">
@@ -74,6 +74,27 @@ export function VideoSection() {
           ))}
         </div>
 
+        {playingVideo !== null && (
+          <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+            <div className="relative w-full max-w-4xl aspect-video">
+              <button
+                className="absolute -top-10 right-0 text-white"
+                onClick={() => setPlayingVideo(null)}
+              >
+                <X className="w-8 h-8" />
+              </button>
+              <iframe
+                className="w-full h-full rounded-lg"
+                src={`${videos[playingVideo].videoUrl}?autoplay=1`}
+                title={videos[playingVideo].title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        )}
+
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -81,9 +102,7 @@ export function VideoSection() {
           viewport={{ once: true }}
           className="text-center mt-12 text-muted-foreground"
         >
-          <p>
-            Повна відео презентація доступна після запиту на перегляд
-          </p>
+          <p>Повна відео презентація доступна після запиту на перегляд</p>
         </motion.div>
       </div>
     </section>
