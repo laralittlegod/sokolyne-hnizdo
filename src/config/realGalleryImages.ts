@@ -19,27 +19,27 @@ export const realGalleryImages: RealGalleryImage[] = [
   // ========== ЛІТО (9 фото) ==========
   {
     src: "/images/gallery/10.1-summer.webp",
-    alt: "Вілла 4 сезони - головний фасад влітку",
+    alt: "Затишний літній день на терасі",
     category: "summer"
   },
   {
     src: "/images/gallery/10.2-summer.webp",
-    alt: "Літня тераса з видом на ліс",
+    alt: "Відпочивальна з видом на ліс",
     category: "summer"
   },
   {
     src: "/images/gallery/13.1-summer_1.webp",
-    alt: "Басейн серед зелені",
+    alt: "Залитий сонцем простір вілли",
     category: "summer"
   },
   {
     src: "/images/gallery/13.3-summer.webp",
-    alt: "Літній сад вілли",
+    alt: "Сонячне світло пронизує інтер'єр",
     category: "summer"
   },
   {
     src: "/images/gallery/13.4-summer.webp",
-    alt: "Альтанка для відпочинку",
+    alt: "Завжди багато світла влітку",
     category: "summer"
   },
   {
@@ -49,7 +49,7 @@ export const realGalleryImages: RealGalleryImage[] = [
   },
   {
     src: "/images/gallery/summer-house_1.webp",
-    alt: "Зона барбекю",
+    alt: "Вілла 4 сезони - головний фасад влітку",
     category: "summer"
   },
  
@@ -60,7 +60,7 @@ export const realGalleryImages: RealGalleryImage[] = [
   },
   {
     src: "/images/gallery/villa-summer-1.1.webp",
-    alt: "Захід сонця над віллою",
+    alt: "Літній теплий ранок на віллі",
     category: "summer"
   },
 
@@ -82,84 +82,75 @@ export const realGalleryImages: RealGalleryImage[] = [
   },
   {
     src: "/images/gallery/autumn_house.webp",
-    alt: "Тераса в осінній період",
+    alt: "Вілла на початку осені",
     category: "autumn"
   },
   {
     src: "/images/gallery/autumn_house_2.webp",
-    alt: "Сад в осінніх фарбах",
+    alt: "Будинок серед осінніх дерев",
     category: "autumn"
   },
   {
     src: "/images/gallery/autumn_house_3.webp",
-    alt: "Алея з опалим листям",
+    alt: "Осінь це прикраса для вілли",
     category: "autumn"
   },
   {
     src: "/images/gallery/autumn_house_6.1.webp",
-    alt: "Вечірні вогні восени",
+    alt: "Вид на осінній парковий ландшафт",
     category: "autumn"
   },
   {
     src: "/images/gallery/autumn_house_7.webp",
-    alt: "Вид з вікна восени",
+    alt: "Алея в осінньому листі",
     category: "autumn"
   },
   {
     src: "/images/gallery/autumn_house_8.webp",
-    alt: "Осінній ранок",
+    alt: "Вид на віллу з парку в осінніх тонах",
     category: "autumn"
   },
-  {
-    src: "/images/gallery/villa-autumn-2.1.webp",
-    alt: "Вілла в осінньому тумані",
-    category: "autumn"
-  },
+  
 
   // ========== ЗИМА (10 фото) ==========
   {
     src: "/images/gallery/4.1-winter-house.webp",
-    alt: "Вілла вкрита снігом",
+    alt: "Сонячний зимовий день біля вілли",
     category: "winter"
   },
   {
     src: "/images/gallery/4.3-winter.webp",
-    alt: "Зимовий фасад вілли",
+    alt: "Засніжений сад навколо вілли",
     category: "winter"
   },
   {
     src: "/images/gallery/winter-1.webp",
-    alt: "Засніжена територія маєтку",
+    alt: "Засніжена територія маєтку у вечірній час",
     category: "winter"
   },
   {
     src: "/images/gallery/winter-2.webp",
-    alt: "Затишок взимку",
+    alt: "Вечірній затишок взимку",
     category: "winter"
   },
   {
     src: "/images/gallery/winter-3.webp",
-    alt: "Заповідник Межигір'я взимку",
+    alt: "Вид з балкона на зимовий пейзаж",
     category: "winter"
   },
   {
     src: "/images/gallery/winter-4.webp",
-    alt: "Вечірнє світло на снігу",
+    alt: "Засніжений заповідник біля вілли ввечері",
     category: "winter"
   },
   {
     src: "/images/gallery/winter-5.webp",
-    alt: "Димар у роботі",
-    category: "winter"
-  },
-  {
-    src: "/images/gallery/winter-6.webp",
-    alt: "Зимовий ранок біля вілли",
+    alt: "Зимовий ранок у парку біля вілли",
     category: "winter"
   },
   {
     src: "/images/gallery/winter-house.webp",
-    alt: "Сніжинки на вікнах",
+    alt: "Сніжинки на вікнах - зимовий сад",
     category: "winter"
   },
   {
@@ -171,7 +162,7 @@ export const realGalleryImages: RealGalleryImage[] = [
   // ========== ВЕСНА (10 фото) ==========
   {
     src: "/images/gallery/6.3_spring.webp",
-    alt: "Вілла навесні в цвіту",
+    alt: "Весняний ранок просочується світлом",
     category: "spring"
   },
   {
@@ -186,12 +177,7 @@ export const realGalleryImages: RealGalleryImage[] = [
   },
   {
     src: "/images/gallery/spring_1.1.webp",
-    alt: "Весняна свіжість",
-    category: "spring"
-  },
-  {
-    src: "/images/gallery/spring_2.webp",
-    alt: "Пробудження природи навесні",
+    alt: "Рання весняна свіжість",
     category: "spring"
   },
   {
@@ -201,69 +187,69 @@ export const realGalleryImages: RealGalleryImage[] = [
   },
   {
     src: "/images/gallery/spring_4.1.webp",
-    alt: "Пробудження природи навесні",
+    alt: "Трохи снігу навесні",
     category: "spring"
   },
   {
     src: "/images/gallery/spring_5.1.webp",
-    alt: "Пробудження природи навесні",
+    alt: "Пробудження зранку навесні",
     category: "spring"
   },
   {
     src: "/images/gallery/spring_6.webp",
-    alt: "Пробудження природи навесні",
+    alt: "Весна вже тут",
     category: "spring"
   },
   {
     src: "/images/gallery/villa-spinng-1.2.webp",
-    alt: "Пробудження природи навесні",
+    alt: "Весна в розпалі",
     category: "spring"
   },
 
   // ========== ІНТЕР'ЄР (10 фото) ==========
   {
     src: "/images/gallery/villa-aero-5.1_1.webp",
-    alt: "Просторе вітальня з каміном",
+    alt: "Аєро макет вілли",
     category: "interior"
   },
   {
     src: "/images/gallery/villa-autumn-2.1.webp",
-    alt: "Вітальня з панорамними вікнами",
+    alt: "Панорама літа на віллі",
     category: "interior"
   },
   {
     src: "/images/gallery/villa-bath-12.4.webp",
-    alt: "Головна спальня",
+    alt: "Вид у вікно з ванної кімнати у головній спальні",
     category: "interior"
   },
   {
     src: "/images/gallery/villa-bedroom-12.1.webp",
-    alt: "Гостьова спальня",
+    alt: "Головна спальня",
     category: "interior"
   },
   {
     src: "/images/gallery/villa-cabinet-9.2.webp",
-    alt: "Сучасна кухня з островом",
+    alt: "Кабінет з видом на ліс",
     category: "interior"
   },
   {
     src: "/images/gallery/villa-childrenroom-15.2.webp",
-    alt: "Їдальня на 12 персон",
+    alt: "Дитяча кімната з видом на парк",
     category: "interior"
   },
   {
     src: "/images/gallery/villa-garden-7.1.webp",
-    alt: "Головна ванна кімната",
+    alt: "Їдальня з видом на сад",
     category: "interior"
   },
   {
     src: "/images/gallery/villa-hall-6.1.webp",
-    alt: "Робочий кабінет",
+    alt: "Затишний холл ввечері",
     category: "interior"
   },
   {
     src: "/images/gallery/villa-kitchen-8.4.webp",
-    alt: "Холл з мармуровими сходами",
+    alt: "Сучасна кухня з островом",
     category: "interior"
   },
   {
@@ -273,12 +259,12 @@ export const realGalleryImages: RealGalleryImage[] = [
   },
   {
     src: "/images/gallery/villa-living-room-8.1.webp",
-    alt: "Винний льох",
+    alt: "Вечірня вітальня",
     category: "interior"
   },
   {
     src: "/images/gallery/villa-progect-5.2_1.webp",
-    alt: "Винний льох",
+    alt: "Макет вілли з усіх боків",
     category: "interior"
   },
 ];
