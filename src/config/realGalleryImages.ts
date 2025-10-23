@@ -16,7 +16,7 @@ export interface RealGalleryImage {
 }
 
 export const realGalleryImages: RealGalleryImage[] = [
-  // ========== ЛІТО (7 фото) ==========
+  // ========== ЛІТО (9 фото) ==========
   {
     src: "/images/gallery/10.1-summer.webp",
     alt: "Вілла 4 сезони - головний фасад влітку",
@@ -54,7 +54,12 @@ export const realGalleryImages: RealGalleryImage[] = [
   },
  
   {
-    src: "/images/gallery/summer-15.webp",
+    src: "/images/gallery/summer-sun.webp",
+    alt: "Захід сонця над віллою",
+    category: "summer"
+  },
+  {
+    src: "/images/gallery/villa-summer-1.1.webp",
     alt: "Захід сонця над віллою",
     category: "summer"
   },
@@ -113,131 +118,166 @@ export const realGalleryImages: RealGalleryImage[] = [
 
   // ========== ЗИМА (10 фото) ==========
   {
-    src: "/images/gallery/winter-01.webp",
+    src: "/images/gallery/4.1-winter-house.webp",
     alt: "Вілла вкрита снігом",
     category: "winter"
   },
   {
-    src: "/images/gallery/winter-02.webp",
+    src: "/images/gallery/4.3-winter.webp",
     alt: "Зимовий фасад вілли",
     category: "winter"
   },
   {
-    src: "/images/gallery/winter-03.webp",
+    src: "/images/gallery/winter-1.webp",
     alt: "Засніжена територія маєтку",
     category: "winter"
   },
   {
-    src: "/images/gallery/winter-04.webp",
+    src: "/images/gallery/winter-2.webp",
     alt: "Затишок взимку",
     category: "winter"
   },
   {
-    src: "/images/gallery/winter-05.webp",
+    src: "/images/gallery/winter-3.webp",
     alt: "Заповідник Межигір'я взимку",
     category: "winter"
   },
   {
-    src: "/images/gallery/winter-06.webp",
+    src: "/images/gallery/winter-4.webp",
     alt: "Вечірнє світло на снігу",
     category: "winter"
   },
   {
-    src: "/images/gallery/winter-07.webp",
+    src: "/images/gallery/winter-5.webp",
     alt: "Димар у роботі",
     category: "winter"
   },
   {
-    src: "/images/gallery/winter-08.webp",
+    src: "/images/gallery/winter-6.webp",
     alt: "Зимовий ранок біля вілли",
     category: "winter"
   },
   {
-    src: "/images/gallery/winter-09.webp",
+    src: "/images/gallery/winter-house.webp",
     alt: "Сніжинки на вікнах",
     category: "winter"
   },
   {
-    src: "/images/gallery/winter-10.webp",
+    src: "/images/gallery/villa-winter-4.2.webp",
     alt: "Казкова зимова атмосфера",
     category: "winter"
   },
 
-  // ========== ВЕСНА (5 фото) ==========
+  // ========== ВЕСНА (10 фото) ==========
   {
-    src: "/images/gallery/spring-01.webp",
+    src: "/images/gallery/6.3_spring.webp",
     alt: "Вілла навесні в цвіту",
     category: "spring"
   },
   {
-    src: "/images/gallery/spring-02.webp",
+    src: "/images/gallery/7.2_spring.webp",
     alt: "Квітучий сад навесні",
     category: "spring"
   },
   {
-    src: "/images/gallery/spring-03.webp",
+    src: "/images/gallery/13.2_spring.webp",
     alt: "Перші весняні листочки",
     category: "spring"
   },
   {
-    src: "/images/gallery/spring-04.webp",
+    src: "/images/gallery/spring_1.1.webp",
     alt: "Весняна свіжість",
     category: "spring"
   },
   {
-    src: "/images/gallery/spring-05.webp",
+    src: "/images/gallery/spring_2.webp",
+    alt: "Пробудження природи навесні",
+    category: "spring"
+  },
+  {
+    src: "/images/gallery/spring_3.1.webp",
+    alt: "Пробудження природи навесні",
+    category: "spring"
+  },
+  {
+    src: "/images/gallery/spring_4.1.webp",
+    alt: "Пробудження природи навесні",
+    category: "spring"
+  },
+  {
+    src: "/images/gallery/spring_5.1.webp",
+    alt: "Пробудження природи навесні",
+    category: "spring"
+  },
+  {
+    src: "/images/gallery/spring_6.webp",
+    alt: "Пробудження природи навесні",
+    category: "spring"
+  },
+  {
+    src: "/images/gallery/villa-spinng-1.2.webp",
     alt: "Пробудження природи навесні",
     category: "spring"
   },
 
   // ========== ІНТЕР'ЄР (10 фото) ==========
   {
-    src: "/images/gallery/interior-01.webp",
+    src: "/images/gallery/villa-aero-5.1_1.webp",
     alt: "Просторе вітальня з каміном",
     category: "interior"
   },
   {
-    src: "/images/gallery/interior-02.webp",
+    src: "/images/gallery/villa-autumn-2.1.webp",
     alt: "Вітальня з панорамними вікнами",
     category: "interior"
   },
   {
-    src: "/images/gallery/interior-03.webp",
+    src: "/images/gallery/villa-bath-12.4.webp",
     alt: "Головна спальня",
     category: "interior"
   },
   {
-    src: "/images/gallery/interior-04.webp",
+    src: "/images/gallery/villa-bedroom-12.1.webp",
     alt: "Гостьова спальня",
     category: "interior"
   },
   {
-    src: "/images/gallery/interior-05.webp",
+    src: "/images/gallery/villa-cabinet-9.2.webp",
     alt: "Сучасна кухня з островом",
     category: "interior"
   },
   {
-    src: "/images/gallery/interior-06.webp",
+    src: "/images/gallery/villa-childrenroom-15.2.webp",
     alt: "Їдальня на 12 персон",
     category: "interior"
   },
   {
-    src: "/images/gallery/interior-07.webp",
+    src: "/images/gallery/villa-garden-7.1.webp",
     alt: "Головна ванна кімната",
     category: "interior"
   },
   {
-    src: "/images/gallery/interior-08.webp",
+    src: "/images/gallery/villa-hall-6.1.webp",
     alt: "Робочий кабінет",
     category: "interior"
   },
   {
-    src: "/images/gallery/interior-09.webp",
+    src: "/images/gallery/villa-kitchen-8.4.webp",
     alt: "Холл з мармуровими сходами",
     category: "interior"
   },
   {
-    src: "/images/gallery/interior-10.webp",
+    src: "/images/gallery/villa-living-room-6.2.webp",
+    alt: "Винний льох",
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/villa-living-room-8.1.webp",
+    alt: "Винний льох",
+    category: "interior"
+  },
+  {
+    src: "/images/gallery/villa-progect-5.2_1.webp",
     alt: "Винний льох",
     category: "interior"
   },
