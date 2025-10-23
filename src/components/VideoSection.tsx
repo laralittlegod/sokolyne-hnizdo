@@ -7,22 +7,25 @@ export function VideoSection() {
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
 
   const videos = [
-    {
-      thumbnail: "https://images.unsplash.com/photo-1702222029197-a330aacb6efa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjB2aWxsYSUyMGZvcmVzdHxlbnwxfHx8fDE3NjAyMDQyMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Огляд території",
-      duration: "3:45",
-    },
-    {
-      thumbnail: "https://images.unsplash.com/photo-1668365011614-9c4a49a0e89d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB2aWxsYSUyMGludGVyaW9yfGVufDF8fHx8MTc2MDIwNDIwNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Інтер'єр маєтку",
-      duration: "5:12",
-    },
-    {
-      thumbnail: "https://images.unsplash.com/photo-1652459002590-03af0263b70d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjBuYXR1cmUlMjByZXNlcnZlfGVufDF8fHx8MTc2MDIwNDIwNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      title: "Заповідник Межигір'я",
-      duration: "2:30",
-    },
-  ];
+  {
+    thumbnail: "/images/video-thumbnails/territory.jpg",
+    title: "Огляд території вілли",
+    duration: "3:45",
+    videoUrl: "https://youtube.com/shorts/6cSzkZAiFVQ?feature=share",
+  },
+  {
+    thumbnail: "/images/video-thumbnails/interior.jpg",
+    title: "Інтер'єр маєтку",
+    duration: "5:12",
+    videoUrl: "https://youtube.com/shorts/7t1Lldq2vUY",
+  },
+  {
+    thumbnail: "/images/video-thumbnails/nature.jpg",
+    title: "Заповідник Межигір'я",
+    duration: "2:30",
+    videoUrl: "https://youtube.com/shorts/ckaUKhu5bjc",
+  },
+];
 
   return (
     <section className="py-24 px-4 bg-muted/10">
