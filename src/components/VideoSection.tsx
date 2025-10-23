@@ -9,19 +9,19 @@ export function VideoSection() {
   const videos = [
     {
       thumbnail: "/images/video-thumbnails/soundofnature.jpg",
-      title: "Огляд території вілли",
+      title: "Звуки природи в маєтку",
       duration: "3:45",
       videoUrl: "/videos/soundofnature.mp4",
     },
     {
       thumbnail: "/images/video-thumbnails/interior.jpg",
-      title: "Інтер'єр маєтку",
+      title: "Швидкий огляд вілли в середині",
       duration: "5:12",
       videoUrl: "/videos/villaroomtour.mp4",
     },
     {
       thumbnail: "/images/video-thumbnails/birdssinging.jpg",
-      title: "Заповідник Межигір'я",
+      title: "Спів птахів на світанку",
       duration: "2:30",
       videoUrl: "/videos/birdssinging.mp4",
     },

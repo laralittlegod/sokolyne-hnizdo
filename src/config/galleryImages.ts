@@ -25,7 +25,7 @@ export interface GalleryImage {
 }
 
 export const galleryImages: GalleryImage[] = [
-  // ЕКСТЕР'ЄР БУДИНКУ → "ЛІТО"
+  // ЕКСТЕР'ЄР БУДИНКУ → "ЛІТО" (фото 1-30)
   {
     src: "/images/gallery/villa-summer-1.1.webp",
     alt: "Вілла Чотири сезони влітку серед зелені",
@@ -46,7 +46,7 @@ export const galleryImages: GalleryImage[] = [
   // { src: "/images/gallery/exterior-05.jpg", alt: "Опис фото", category: "exterior" },
   // ... до 15 фото екстер'єру
 
-  // ІНТЕР'ЄР (фото 16-35)
+  // ІНТЕР'ЄР (фото 4-8)
   {
     src: "/images/gallery/villa-hall-6.1.webp",
     alt: "Вітальня вілли",
@@ -92,7 +92,7 @@ export const galleryImages: GalleryImage[] = [
   // { src: "/images/gallery/interior-06.jpg", alt: "Опис фото", category: "interior" },
   // ... до 20 фото інтер'єру
 
-  // ПРИРОДА І ТЕРИТОРІЯ (фото 36-50)
+  // ПРИРОДА І ТЕРИТОРІЯ (фото 9-12)
   {
     src: "/images/gallery/villa-aero-5.1_1.webp",
     alt: "Проект будинку",
@@ -105,6 +105,11 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     src: "/images/gallery/villa-spinng-1.2.webp",
+    alt: "Вілла навесні",
+    category: "spring"
+  },
+  {
+    src: "/images/gallery/summer-sun.webp",
     alt: "Вілла навесні",
     category: "spring"
   },
