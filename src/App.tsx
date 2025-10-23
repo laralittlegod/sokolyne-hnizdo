@@ -41,7 +41,7 @@ export default function App() {
   if (currentPage === "gallery") {
     return (
       <div className="min-h-screen">
-        <GoogleAnalytics trackingId="GA_MEASUREMENT_ID" />
+        <GoogleAnalytics trackingId="G-Q11NPCSK05" />
         <Toaster position="top-center" richColors />
         <GalleryPage onBackToHome={() => setCurrentPage("home")} />
       </div>
@@ -55,7 +55,7 @@ export default function App() {
         Для активації Google Analytics замініть 'GA_MEASUREMENT_ID' 
         на ваш реальний Google Analytics Measurement ID (наприклад, 'G-XXXXXXXXXX')
       */}
-      <GoogleAnalytics trackingId="GA_MEASUREMENT_ID" />
+      <GoogleAnalytics trackingId="G-Q11NPCSK05" />
       
       <Toaster position="top-center" richColors />
       
