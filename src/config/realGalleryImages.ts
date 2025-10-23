@@ -111,7 +111,7 @@ export const realGalleryImages: RealGalleryImage[] = [
     category: "autumn"
   },
   {
-    src: "/images/gallery/autumn-10.webp",
+    src: "/images/gallery/villa-autumn-2.1.webp",
     alt: "Вілла в осінньому тумані",
     category: "autumn"
   },
