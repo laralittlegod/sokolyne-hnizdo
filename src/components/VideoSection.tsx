@@ -8,22 +8,22 @@ export function VideoSection() {
 
   const videos = [
     {
-      thumbnail: "/images/video-thumbnails/territory.jpg",
+      thumbnail: "/images/video-thumbnails/soundofnature.jpg",
       title: "Огляд території вілли",
       duration: "3:45",
-      videoUrl: "https://www.youtube.com/embed/6cSzkZAiFVQ",
+      videoUrl: "/videos/soundofnature.mp4",
     },
     {
       thumbnail: "/images/video-thumbnails/interior.jpg",
       title: "Інтер'єр маєтку",
       duration: "5:12",
-      videoUrl: "https://www.youtube.com/embed/7t1Lldq2vUY",
+      videoUrl: "/videos/villaroomtour.mp4",
     },
     {
-      thumbnail: "/images/video-thumbnails/nature.jpg",
+      thumbnail: "/images/video-thumbnails/birdssinging.jpg",
       title: "Заповідник Межигір'я",
       duration: "2:30",
-      videoUrl: "https://www.youtube.com/embed/ckaUKhu5bjc",
+      videoUrl: "/videos/birdssinging.mp4",
     },
   ];
 
