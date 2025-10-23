@@ -181,12 +181,12 @@ export const realGalleryImages: RealGalleryImage[] = [
     category: "spring"
   },
   {
-    src: "/images/gallery/spring_3.1.webp",
+    src: "/images/gallery/spring_2.webp",
     alt: "Пробудження природи навесні",
     category: "spring"
   },
   {
-    src: "/images/gallery/spring_4.1.webp",
+    src: "/images/gallery/spring_3.1.webp",
     alt: "Трохи снігу навесні",
     category: "spring"
   },
