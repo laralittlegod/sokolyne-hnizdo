@@ -11,7 +11,7 @@ export function VideoSection() {
     thumbnail: "/images/video-thumbnails/territory.jpg",
     title: "Огляд території вілли",
     duration: "3:45",
-    videoUrl: "https://youtube.com/shorts/6cSzkZAiFVQ?feature=share",
+    videoUrl: "https://youtube.com/shorts/6cSzkZAiFVQ?si=rqRF1uqbXz8ALC-n",
   },
   {
     thumbnail: "/images/video-thumbnails/interior.jpg",
@@ -23,7 +23,7 @@ export function VideoSection() {
     thumbnail: "/images/video-thumbnails/nature.jpg",
     title: "Заповідник Межигір'я",
     duration: "2:30",
-    videoUrl: "https://youtube.com/shorts/ckaUKhu5bjc",
+    videoUrl: "https://youtube.com/shorts/ckaUKhu5bjc?si=CKYJCwTnZ7kZoapH",
   },
 ];
 
